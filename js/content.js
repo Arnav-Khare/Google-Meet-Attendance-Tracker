@@ -10,8 +10,9 @@ const panelHTML = `<div
         jsaction="VOcP9c:QPhnyd;ntQuZe:EuYDs"
     >
     <h1>JIIT</h1>
-    <img src="img_LOGO.jpg" alt="JIIT LOGO" width="500" height="600">
+    <img src="img_LOGO.jpg" alt="JIIT LOGO" width="200" height="80">
     <h2>Login to Account</h2> 
+    <div style='text-align:center'>
 	<form id="contact_form" action="#" method="POST" enctype="multipart/form-data"> 
 		<div class="row"> 
 			<label for="name">User Name:</label><br /> 
