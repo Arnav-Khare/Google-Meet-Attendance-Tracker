@@ -12,7 +12,7 @@ const panelHTML = `<div
     <div style='text-align:center'>
     <h1>JIIT</h1>
     <div style='text-align:center'>
-    <img src="Logo-jiit.jpg" alt="JIIT LOGO" width="200" height="80">
+    <img src="Logo-jiit.jpg" alt="JIIT LOGO" width="200" height="160">
     <h2>Login to Account</h2> 
     <div style='text-align:center'>
 	<form id="contact_form" action="#" method="POST" enctype="multipart/form-data"> 
