@@ -1,7 +1,6 @@
 console.log("Content Script is Running...!!")
 const parentDiv = document.querySelector('.crqnQb')
-
-
+const image = 'https://user-images.githubusercontent.com/55575931/137891778-f884a63c-db36-4000-91fc-80dba4ec3fdb.jpg'
 const panelHTML = `<div
         class="WUFI9b qdulke"
         id="panel"
@@ -12,21 +11,19 @@ const panelHTML = `<div
     <div style='text-align:center'>
     <h1>JIIT</h1>
     <div style='text-align:center'>
-    <img src="Logo-jiit.jpg" alt="JIIT LOGO" width="200" height="160">
-    <h2>Login to Account</h2> 
+    <img src=${image} alt="JIIT LOGO" width="200" height="160">
+    <h2>Login to your Account</h2> 
     <div style='text-align:center'>
 	<form id="contact_form" action="#" method="POST" enctype="multipart/form-data"> 
 		<div class="row"> 
 			<label for="name">User Name:</label><br /> 
-			<input id="name" class="input" name="name" type="text" value="" size="30" /><br /> 
+			<input id="username" class="input" name="name" type="text" value="" size="30" /><br /> 
 		</div> 
 		<div class="row"> 
 			<label for="email">Password</label>:</label><br /> 
-			<input id="email" class="input" name="email" type="text" value="" size="30" /><br /> 
+			<input id="password" class="input" name="email" type="password" value="" size="30" /><br /> 
 		</div> 
-		<input id="submit_button"  class="link-style" type="button" value="Login" style="margin-top:10px;" onClick="showPage('login-confirmation.html')" /> 
-		<input id="submit_button"  class="link-style" type="button" value="Register New User" style="margin-top:10px;" onClick="showPage('register.html')" /> 
-		<div style="margin-top:10px; font-size:14px; font-weight:bold; cursor:pointer; ">Forgot Password ? <a onClick="showPage('forgot-password.html')">Click Here</a></div> 
+		<input id="submit_button"  class="link-style" type="button" value="Login" style="margin-top:10px;"" /> 
 	</form>			 
 	<hr> 
     </div>`
@@ -89,6 +86,17 @@ const buttonHTML = `<div class="r6xAKc">
 
 
 chrome.storage.local.get(null,(result)=>{
+    
+    function instantiate() {
+        chrome.runtime.sendMessage(
+            {
+                data: 'instantiate',
+            },
+            () => {
+                Utils.log('Successfully initialized extension.')
+            }
+        )
+    }
     function start(){
         chrome.runtime.sendMessage({data:"active"},async(response)=>{
 
@@ -99,7 +107,6 @@ chrome.storage.local.get(null,(result)=>{
             const attendanceButton = document.getElementById('attendance')
             const infoButton = document.querySelector('.r6xAKc button')    
             const panelContainer = document.querySelector('.R3Gmyc.qwU8Me')  
-
             const panelUnhiddenObserver = new MutationObserver(
                 (mutations, me) => {
                     const mutation = mutations[0]
@@ -140,6 +147,7 @@ chrome.storage.local.get(null,(result)=>{
             
             })
         })
+        instantiate()
     }
 
     const obsereve = new MutationObserver((mutations, me) => {
