@@ -12,6 +12,7 @@
     "content_scripts": [
       {
           "matches": ["*://meet.google.com/**-**-**"],
+          "css": ["css/material-components.min.css","css/style.css"],
           "js": [
               "js/content.js"
           ]

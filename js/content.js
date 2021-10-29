@@ -8,26 +8,56 @@ const panelHTML = `<div
         jscontroller="dkJU2d"
         jsaction="VOcP9c:QPhnyd;ntQuZe:EuYDs"
     >
-    <div style='text-align:center'>
-    <h1>JIIT</h1>
-    <div style='text-align:center'>
-    <img src=${image} alt="JIIT LOGO" width="200" height="160">
-    <h2>Login to your Account</h2> 
-    <div style='text-align:center'>
-	<form id="contact_form" action="#" method="POST" enctype="multipart/form-data"> 
-		<div class="row"> 
-			<label for="name">User Name:</label><br /> 
-			<input id="username" class="input" name="name" type="text" value="" size="30" /><br /> 
-		</div> 
-		<div class="row"> 
-			<label for="email">Password</label>:</label><br /> 
-			<input id="password" class="input" name="email" type="password" value="" size="30" /><br /> 
-		</div> 
-		<input id="submit_button"  class="link-style" type="button" value="Login" style="margin-top:10px;"" /> 
-	</form>			 
-	<hr> 
+    <div class="CYZUZd">
+            <div class="J8vCN zHGix" role="heading" aria-level="2" tabindex="-1" jsname="rQC7Ie">
+                Attendance
+            </div>
+            <div class="VUk8eb">
+                <div jsaction="JIbuQc:hR1TY;rcuQ6b:npT2md" jscontroller="AXYg3e">
+                    <span data-is-tooltip-wrapper="true"
+                        ><button class="VfPpkd-Bz112c-LgbsSe yHy1rc eT1oJ IWtuld wBYOYb" jscontroller="soHxf" jsaction="click:cOuCgd; mousedown:UX7yZ; mouseup:lbsD7e; mouseenter:tfO1Yc; mouseleave:JywGue; touchstart:p6p2H; touchmove:FwuNnf; touchend:yfqBxc; touchcancel:JMtRjd; focus:AHmuwe; blur:O22p3e; contextmenu:mg9Pef" aria-label="Close" data-tooltip-enabled="true" data-tooltip-id="tt-c21" >
+                            <div class="VfPpkd-Bz112c-Jh9lGc"></div>
+                            <i class="google-material-icons VfPpkd-kBDsod" aria-hidden="true" >
+                                close
+                            </i>
+                        </button>         
+                        <div class="EY8ABd-OWXEXe-TAWMXe"  role="tooltip"  aria-hidden="true" id="tt-c21" >
+                            Close
+                        </div>
+                    </span>
+                </div>
+            </div>
+    </div>
+        <div class="hWX4r">
+            <div  class=view login-view"" style='text-align:center'>
+                <h1>JIIT</h1>
+                 <div style='text-align:center'>
+                <img src=${image} alt="JIIT LOGO" width="200" height="160">
+                 <h2>Login to your Account</h2> 
+                <div style='text-align:center'>
+                 <form id="contact_form" action="#" method="POST" enctype="multipart/form-data"> 
+                <div class="row"> 
+                    <label for="name">User Name:</label><br /> 
+                    <input id="username" class="input" name="name" type="text" value="" size="30" /><br /> 
+                </div> 
+                <div class="row"> 
+                    <label for="email">Password</label>:</label><br /> 
+                    <input id="password" class="input" name="email" type="password" value="" size="30" /><br /> 
+                </div> 
+                <input id="submit_button"  class="link-style" type="button" value="Login" style="margin-top:10px;"" /> 
+            </form>			 
+            <hr> 
+        </div>
+        <div class ="view selection-view" hidden >
+                //TO BE EDITED HERE...!!!
+        </div>
+        <div>
+
+        </div>
+    </div>
     </div>`
 
+   
 const buttonHTML = `<div class="r6xAKc">
     <span data-is-tooltip-wrapper="true"
         ><button
