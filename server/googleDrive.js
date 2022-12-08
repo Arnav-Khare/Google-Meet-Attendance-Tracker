@@ -2,12 +2,11 @@ const {google} = require('googleapis')
 const path = require('path')
 const fs = require('fs')
 
-const CLIENT_ID = '1064833221884-5abr2t8kc8d047ig4unto4srudhb1q11.apps.googleusercontent.com'
+const CLIENT_ID = ''
+const CLIENT_SECRET =''
 
-const CLIENT_SECRET ='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'
-
-const REDIRECT_URI = 'https://developers.google.com/oauthplayground'
-const REFRESH_TOKEN = '1//04hcizHkRPS9uCgYIARAAGAQSNwF-L9Ir5wQJY7nDQlptGgNJwK6SBG869xencdipZBbIKX_YdFF1-6-HNorwccV5l8uAmijZAbA'
+const REDIRECT_URI = ''
+const REFRESH_TOKEN = ''
 
 
 const oauth2Client = new google.auth.OAuth2(CLIENT_ID,CLIENT_SECRET,REDIRECT_URI);
