@@ -293,7 +293,11 @@ chrome.storage.local.get(null,(result)=>{
         chrome.runtime.sendMessage({data:"active"},async(response)=>{
 
             document.querySelector('[jsname="HlFzId"]').insertAdjacentHTML('afterend', panelHTML)
-            document.querySelector('.r6xAKc').insertAdjacentHTML('afterend', buttonHTML) 
+            await delay(1000);
+            while (document.querySelector('.r6xAKc') === null || document.querySelector('.r6xAKc') === undefined){
+                continue;
+            }
+            document.querySelector('.r6xAKc').insertAdjacentHTML('afterEnd', buttonHTML) 
             const attendancePanel = document.getElementById('panel') 
 
             const attendanceButton = document.getElementById('attendance')
@@ -395,8 +399,15 @@ chrome.storage.local.get(null,(result)=>{
 
         instantiate()
     })}
-
-    const obsereve = new MutationObserver((mutations, me) => {
+    
+    async function delay (time){
+        await new Promise( (resolve,reject)=>{
+            setTimeout(() => {
+                resolve()
+            }, time);
+        })
+    }
+    const obsereve = new MutationObserver(async (mutations, me) => {
         console.log("Mutation Observer i.e All changes in the DOM element is being Noted")
         if (document.querySelector('.c8mVDd')) {
             const s = document.createElement('script')
